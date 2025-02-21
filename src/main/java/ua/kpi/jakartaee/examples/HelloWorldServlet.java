@@ -5,7 +5,7 @@ import java.io.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "helloWorld", value = "/hello-world")
+@WebServlet(name = "helloWorldServlet", value = "/hello-world-servlet")
 public class HelloWorldServlet extends HttpServlet {
     private String message;
 
