@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:17.4
+    container_name: jakarta-ee-demo-labs-db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 'postgres'
+    ports:
+      - '5432:5432'
+    volumes:
+      - jakarta-ee-demo-labs-volume:/var/lib/postgresql/data
+    networks:
+      - jakarta-ee-demo-labs-network
+
+volumes:
+  jakarta-ee-demo-labs-volume:
+    name: jakarta-ee-demo-labs-volume
+
+networks:
+  jakarta-ee-demo-labs-network:
+    name: jakarta-ee-demo-labs-network

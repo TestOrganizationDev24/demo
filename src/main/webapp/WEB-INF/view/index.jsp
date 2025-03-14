@@ -19,7 +19,7 @@
 <nav>
     <a id="logo-container" class="logo-container" href="${pageContext.request.contextPath}/">
         <img class="jakarta-ee-logo" src="${pageContext.request.contextPath}/images/jakartaee-logo.png"
-             alt="JakarataEE logo">
+             alt="JakartaEE logo">
         <div class="logo-info">Розроблення застосунків на платформі JakartaEE</div>
     </a>
     <a class="kpi-info" href="https://kpi.ua/">
@@ -39,7 +39,7 @@
             <div>Команда №1</div>
             <div id="member-group-info">
                 <c:forEach var="user" items="${users}">
-                    <div class="team-member">${user.group} ${user.name}</div>
+                    <div class="team-member"><c:out value="${user.group}" /> <c:out value="${user.name}" /></div>
                 </c:forEach>
             </div>
         </div>
@@ -61,8 +61,8 @@
                     </c:choose>
                 </div>
                 <div class="member-info">
-                    <div class="member-name">${user.name}</div>
-                    <div class="member-group">${user.group}</div>
+                    <div class="member-name"><c:out value="${user.name}" /></div>
+                    <div class="member-group"><c:out value="${user.group}" /></div>
                     <a class="member-links" href="${user.githubLink}">GitHub</a>
                 </div>
                 <a class="visit-button" href="${pageContext.request.contextPath}/team/members/${user.username}">More</a>
